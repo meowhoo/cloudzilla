@@ -1,5 +1,7 @@
 # CloudZilla
 
+[English](README.md) | [繁體中文](README.zh-TW.md)
+
 A cross-platform desktop application for managing files across multiple cloud storage services.
 
 ## Features
