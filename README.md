@@ -35,7 +35,9 @@ After launching the app:
 
 ## Screenshots
 
-<!-- TODO: Add screenshots -->
+![CloudZilla Main Interface](screenshots/screenshot01.png)
+
+[View more screenshots](screenshots/screenshot02.png)
 
 ## Prerequisites
 

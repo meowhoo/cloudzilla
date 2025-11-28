@@ -35,7 +35,9 @@ npm start
 
 ## 截圖
 
-<!-- TODO: 新增截圖 -->
+![CloudZilla 主介面](screenshots/screenshot01.png)
+
+[查看更多截圖](screenshots/screenshot02.png)
 
 ## 系統需求
 
