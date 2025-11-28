@@ -1,0 +1,256 @@
+{
+    "app": {
+        "name": "CloudZilla",
+        "title": "Cloud File Manager"
+    },
+    "actions": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "refresh": "Refresh",
+        "ok": "OK",
+        "close": "Close",
+        "add": "Add",
+        "edit": "Edit",
+        "connect": "Connect",
+        "disconnect": "Disconnect"
+    },
+    "toolbar": {
+        "siteManager": "Site Manager",
+        "refresh": "Refresh",
+        "switchTheme": "Switch Theme",
+        "switchToLight": "Switch to Light Mode",
+        "switchToDark": "Switch to Dark Mode",
+        "showTerminal": "Show Terminal",
+        "hideTerminal": "Hide Terminal",
+        "settings": "Settings",
+        "copyToRight": "Copy to Right",
+        "copyToLeft": "Copy to Left",
+        "moveToRight": "Move to Right",
+        "moveToLeft": "Move to Left",
+        "delete": "Delete"
+    },
+    "siteManager": {
+        "title": "Site Manager",
+        "noSites": "No sites configured. Click 'Add Site' to get started.",
+        "addSite": "Add Site",
+        "newSite": "New Site",
+        "editSite": "Edit Site",
+        "deleteSite": "Delete Site",
+        "confirmDelete": "Are you sure you want to delete this site?",
+        "siteName": "Site Name",
+        "hostName": "Host (Name)",
+        "protocol": "Protocol",
+        "provider": "Provider",
+        "selectProvider": "Select Provider",
+        "clientId": "Client ID",
+        "clientSecret": "Client Secret",
+        "local": "Local",
+        "testConnection": "Test Connection",
+        "useAutomaticOAuth": "Use automatic OAuth (recommended)",
+        "autoOAuthDesc": "Browser will open for authorization. No client ID/secret needed.",
+        "manualOAuthDesc": "Manual setup requires your own OAuth credentials.",
+        "howToGetId": "How to get ID?",
+        "connectWithOAuth": "Connect with OAuth",
+        "connect": "Connect",
+        "update": "Update",
+        "cancelOAuth": "Cancel OAuth",
+        "tryAgain": "Try Again",
+        "oauthStarting": "Starting OAuth flow...",
+        "oauthWaiting": "Please complete authorization in your browser...",
+        "oauthCompleting": "Completing authorization...",
+        "oauthSuccess": "Successfully connected!",
+        "oauthError": "Error: {{error}}",
+        "enterName": "Please enter a name for this remote",
+        "siteDetails": "Site Details"
+    },
+    "connection": {
+        "testing": "Testing connection...",
+        "connected": "Connected",
+        "disconnected": "Disconnected",
+        "failed": "Connection failed",
+        "testFailed": "Failed to connect to {{name}}"
+    },
+    "fileList": {
+        "name": "Name",
+        "size": "Size",
+        "modified": "Modified",
+        "type": "Type",
+        "folder": "Folder",
+        "file": "File",
+        "goUp": "Go Up",
+        "selectSite": "Select a site to browse files",
+        "loading": "Loading...",
+        "empty": "This folder is empty",
+        "errorLoading": "Failed to load files"
+    },
+    "statusPanel": {
+        "idle": "Ready",
+        "running": "Processing...",
+        "completed": "Completed",
+        "error": "Error",
+        "logs": "Logs",
+        "clearLogs": "Clear Logs",
+        "fileProgress": "File Progress",
+        "terminal": "Terminal",
+        "processing": "Processing...",
+        "noOperations": "No file operations yet.",
+        "enterCommand": "Enter command...",
+        "terminalComingSoon": "Terminal functionality coming soon...",
+        "tasks": "Tasks",
+        "progress": "Progress",
+        "console": "Console"
+    },
+    "tasks": {
+        "running": "Running",
+        "queued": "Queued",
+        "completed": "Completed",
+        "failed": "Failed",
+        "cancelled": "Cancelled",
+        "cancel": "Cancel",
+        "retry": "Retry",
+        "remove": "Remove",
+        "delete": "Delete",
+        "selectAll": "Select All",
+        "clearQueue": "Clear Queue",
+        "clearCompleted": "Clear Completed",
+        "clearFailed": "Clear Failed",
+        "clearHistory": "Clear History",
+        "noTasks": "No tasks",
+        "total": "Total",
+        "selected": "{{count}} selected",
+        "batchCancel": "Cancel Selected",
+        "batchRetry": "Retry Selected",
+        "batchRemove": "Remove Selected",
+        "clearSelection": "Clear Selection",
+        "subTab": {
+            "queued": "Queued",
+            "failed": "Failed",
+            "successful": "Successful"
+        }
+    },
+    "progress": {
+        "speed": "Speed",
+        "eta": "ETA",
+        "transferred": "Transferred",
+        "currentFile": "Current File",
+        "files": "Files",
+        "elapsed": "Elapsed",
+        "command": "Command",
+        "summary": "{{count}} transfer(s) in progress",
+        "noActiveTasks": "No active transfers",
+        "cancelTransfer": "Cancel Transfer",
+        "transferringFiles": "{{count}} file(s) transferring",
+        "total": "Total",
+        "filesLabel": "files",
+        "noActiveFiles": "No files currently transferring"
+    },
+    "console": {
+        "all": "All",
+        "info": "Info",
+        "success": "Success",
+        "warning": "Warning",
+        "error": "Error",
+        "debug": "Debug",
+        "autoScroll": "Auto Scroll",
+        "export": "Export",
+        "clear": "Clear",
+        "noLogs": "No logs yet"
+    },
+    "messages": {
+        "connecting": "Connecting to {{name}}...",
+        "connected": "Connected to {{name}} successfully",
+        "refreshed": "Refreshed file lists",
+        "themeChanged": "Theme changed to {{mode}} mode",
+        "navigatedTo": "Navigated to {{folder}}",
+        "navigatedUp": "Navigated up",
+        "appStarted": "Application started. Ready."
+    },
+    "contextMenu": {
+        "copyToRight": "Copy to Right",
+        "copyToLeft": "Copy to Left",
+        "moveToRight": "Move to Right",
+        "moveToLeft": "Move to Left",
+        "syncToRight": "Sync to Right",
+        "syncToLeft": "Sync to Left",
+        "delete": "Delete",
+        "rename": "Rename",
+        "newFolder": "New Folder",
+        "refresh": "Refresh",
+        "confirmDelete": "Are you sure you want to delete {{count}} item(s)?",
+        "newFolderPrompt": "Enter folder name:",
+        "copyToHere": "Copy to here",
+        "copyPath": "Copy Path"
+    },
+    "breadcrumb": {
+        "home": "Home",
+        "root": "Root",
+        "thisPC": "This PC"
+    },
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel"
+    },
+    "alerts": {
+        "confirm": {
+            "delete": "Are you sure you want to delete {{count}} item(s)?",
+            "deleteTitle": "Confirm Delete",
+            "deleteConfirm": "Delete",
+            "cancel": "Cancel"
+        },
+        "toast": {
+            "deleteStarted": "Deleting {{count}} item(s)...",
+            "deleteSuccess": "Deleted {{count}} item(s)",
+            "deleteFailed": "Delete failed: {{error}}",
+            "transferStarted": "Starting transfer: {{name}}",
+            "transferSuccess": "Transfer complete: {{name}}",
+            "transferFailed": "Transfer failed: {{error}}",
+            "folderCreated": "Created folder: {{name}}",
+            "folderCreateFailed": "Failed to create folder: {{error}}",
+            "renamed": "Renamed to: {{name}}",
+            "renameFailed": "Rename failed: {{error}}",
+            "pathCopied": "Path copied to clipboard",
+            "connected": "Connected to {{name}}",
+            "connectionFailed": "Connection failed: {{error}}"
+        }
+    },
+    "settings": {
+        "title": "Settings",
+        "tabs": {
+            "system": "System",
+            "network": "Network",
+            "faq": "FAQ",
+            "privacy": "Privacy"
+        },
+        "system": {
+            "title": "System Settings",
+            "theme": "Theme",
+            "themeDesc": "Choose application color scheme",
+            "themeSystem": "Follow System",
+            "themeLight": "Light",
+            "themeDark": "Dark",
+            "language": "Language",
+            "languageDesc": "Choose display language",
+            "showHiddenFiles": "Show Hidden Files",
+            "showHiddenFilesDesc": "Display files starting with dot (.)"
+        },
+        "network": {
+            "title": "Network Settings",
+            "applyToNewTasks": "Settings will apply to new transfer tasks. Running tasks are not affected.",
+            "maxTransfers": "Max Concurrent Tasks",
+            "maxTransfersDesc": "Number of transfer tasks running simultaneously (1-4)",
+            "bandwidthLimit": "Bandwidth Limit",
+            "bandwidthLimitDesc": "Maximum transfer speed (0 = unlimited)",
+            "autoRetry": "Auto Retry",
+            "autoRetryDesc": "Automatically retry failed transfers",
+            "retryAttempts": "Retry Attempts",
+            "retryAttemptsDesc": "Number of retry attempts (1-10)"
+        },
+        "faq": {
+            "title": "Frequently Asked Questions"
+        },
+        "privacy": {
+            "title": "Privacy Policy"
+        }
+    }
+}

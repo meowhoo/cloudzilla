@@ -1,0 +1,47 @@
+{
+    "settings": {
+        "title": "Settings",
+        "tabs": {
+            "system": "System",
+            "network": "Network & Transfer",
+            "faq": "FAQ",
+            "privacy": "Privacy"
+        },
+        "system": {
+            "title": "System Settings",
+            "theme": {
+                "title": "Theme",
+                "light": "Light",
+                "dark": "Dark",
+                "system": "Follow System"
+            },
+            "language": "Language",
+            "showHiddenFiles": "Show Hidden Files",
+            "showHiddenFilesDesc": "Show system files like .git, .DS_Store, etc."
+        },
+        "network": {
+            "title": "Network & Transfer",
+            "maxConcurrentTransfers": "Max Concurrent Transfers",
+            "chunkSizeMB": "Chunk Size (MB)",
+            "bandwidthLimit": "Bandwidth Limit (KB/s)",
+            "bandwidthLimitHint": "0 = Unlimited",
+            "autoRetry": "Auto Retry on Failure",
+            "retryAttempts": "Retry Attempts",
+            "enablePreview": "Transfer Preview (Dry Run)",
+            "enablePreviewDesc": "Show confirmation dialog with change summary before syncing."
+        },
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "q1": "How to get Cloud Credentials?",
+            "a1": "Create an App in the developer console (Google Cloud, Dropbox Developers, Azure Portal) to get Client ID and Secret.",
+            "q2": "What is 'Transfer Preview'?",
+            "a2": "Simulates the transfer first. Shows a summary of additions, deletions, and updates before actual execution.",
+            "q3": "Where are my keys stored?",
+            "a3": "Access tokens and credentials are securely stored in your OS keychain (Credential Manager / Keychain)."
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "content": "mv_cloud is a local-first application.\n\n1. No Middleman: Direct transfer between your PC and cloud.\n2. Secure Storage: Tokens stored in OS Keychain.\n3. No Tracking: We don't collect usage data.\n4. Open Source: Code is auditable on GitHub."
+        }
+    }
+}

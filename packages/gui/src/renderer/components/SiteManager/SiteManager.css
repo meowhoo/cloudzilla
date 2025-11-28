@@ -1,0 +1,301 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* 暫時禁用動畫，避免閃爍 */
+    /* animation: fadeIn 0.2s ease-out; */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content.site-manager {
+    width: 850px;
+    height: 550px;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    border: 1px solid #444;
+    overflow: hidden;
+    /* 暫時禁用動畫，避免閃爍 */
+    /* animation: slideUp 0.2s ease-out; */
+    color: #e0e0e0;
+    z-index: 10000;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.site-manager-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-surface);
+}
+
+.site-manager-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-fg);
+}
+
+.site-manager-header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-fg-muted);
+    padding: 4px;
+    border-radius: var(--radius-sm);
+}
+
+.site-manager-header button:hover {
+    background-color: var(--color-hover);
+    color: var(--color-fg);
+}
+
+.site-manager-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.site-sidebar {
+    width: 260px;
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background-color: var(--color-bg);
+    gap: 12px;
+}
+
+.site-details {
+    flex: 1;
+    padding: 32px;
+    background-color: var(--color-surface);
+}
+
+.site-list-container {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
+}
+
+.site-list-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.1s;
+    font-size: 14px;
+    color: var(--color-fg);
+}
+
+.site-list-item:hover {
+    background-color: var(--color-hover);
+}
+
+.site-list-item.selected {
+    background-color: var(--color-active);
+    color: var(--color-fg);
+}
+
+.site-icon {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-fg);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    background-color: var(--color-surface);
+    color: var(--color-fg);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.form-actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    background-color: var(--color-primary, #3b82f6);
+    color: white;
+    border: 1px solid var(--color-primary, #3b82f6);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover, #60a5fa);
+    border-color: var(--color-primary-hover, #60a5fa);
+}
+
+/* Ensure btn-primary is visible in site-manager context */
+.site-manager .btn-primary {
+    background-color: #3b82f6 !important;
+    color: white !important;
+    border: 1px solid #3b82f6 !important;
+}
+
+.site-manager .btn-primary:hover {
+    background-color: #60a5fa !important;
+    border-color: #60a5fa !important;
+}
+
+/* Secondary button (default button style) */
+.btn-secondary,
+.form-actions button:not(.btn-primary):not(.btn-danger) {
+    background-color: var(--color-surface);
+    color: var(--color-fg);
+    border: 1px solid var(--color-border);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover,
+.form-actions button:not(.btn-primary):not(.btn-danger):hover {
+    background-color: var(--color-hover);
+    border-color: var(--color-fg-muted);
+}
+
+.btn-danger {
+    background-color: var(--color-surface);
+    color: var(--color-danger);
+    border: 1px solid var(--color-border);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-danger:hover {
+    background-color: rgba(255, 93, 108, 0.1);
+    border-color: var(--color-danger);
+}
+
+.btn-new-site {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-surface, #2a2a2a);
+    border: 1px solid var(--color-border, #444);
+    border-radius: var(--radius-sm, 4px);
+    cursor: pointer;
+    font-weight: 500;
+    color: #3b82f6;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-new-site:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Form and Site Info titles */
+.site-form h3,
+.site-info h3 {
+    margin: 0 0 24px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-fg, #e0e0e0);
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: baseline;
+}
+
+.info-label {
+    width: 120px;
+    font-weight: 500;
+    color: var(--color-fg-muted);
+    font-size: 14px;
+}
+
+.info-value {
+    flex: 1;
+    color: var(--color-fg);
+    font-size: 14px;
+}

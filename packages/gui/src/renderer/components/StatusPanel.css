@@ -1,0 +1,227 @@
+.status-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-fg);
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+}
+
+.resize-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    cursor: ns-resize;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.resize-handle:hover {
+    background-color: var(--color-primary);
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    height: 35px;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.status-tabs {
+    display: flex;
+    gap: 4px;
+}
+
+.status-tab {
+    padding: 6px 12px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-fg-muted);
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.status-tab:hover {
+    background-color: var(--color-hover);
+}
+
+.status-tab.active {
+    color: var(--color-fg);
+    border-bottom-color: var(--color-primary);
+}
+
+.status-indicator {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.status-header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-speed {
+    font-size: 11px;
+    font-family: monospace;
+    color: var(--color-success);
+}
+
+.console-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.console-filter {
+    font-size: 11px;
+    padding: 2px 6px;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    cursor: pointer;
+}
+
+.console-btn {
+    padding: 2px 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--color-fg);
+    transition: opacity 0.15s;
+}
+
+.console-btn:hover {
+    opacity: 0.7;
+}
+
+.console-btn.active {
+    color: var(--color-primary);
+}
+
+.status-body {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--color-bg);
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.progress-section {
+    padding: 8px 12px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: var(--color-fg);
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: var(--color-hover);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.logs-container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.log-entry {
+    padding: 3px 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-left: 2px solid transparent;
+}
+
+.log-entry.info {
+    border-left-color: var(--color-primary);
+    color: var(--color-fg);
+}
+
+.log-entry.success {
+    border-left-color: var(--color-success);
+    color: var(--color-success);
+}
+
+.log-entry.warning {
+    border-left-color: var(--color-warning);
+    color: var(--color-warning);
+}
+
+.log-entry.error {
+    border-left-color: var(--color-danger);
+    color: var(--color-danger);
+}
+
+.log-timestamp {
+    color: var(--color-muted);
+    margin-right: 8px;
+}
+
+.terminal-content {
+    background-color: var(--color-bg);
+    padding: 8px;
+}
+
+.terminal-prompt {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.prompt-symbol {
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.terminal-input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: var(--color-fg);
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+.terminal-input::placeholder {
+    color: var(--color-muted);
+}
+
+.terminal-output {
+    margin-top: 8px;
+    color: var(--color-fg);
+}

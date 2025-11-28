@@ -1,0 +1,12 @@
+{
+  "language": "zh-TW",
+  "theme": "light",
+  "version": "1.0.0",
+  "sites": [],
+  "showHiddenFiles": true,
+  "maxConcurrentTransfers": 1,
+  "bandwidthLimitKBps": 100,
+  "autoRetry": true,
+  "retryAttempts": 3,
+  "chunkSizeMB": 4
+}

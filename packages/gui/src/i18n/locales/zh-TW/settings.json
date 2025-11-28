@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "title": "設定",
+        "interface": "介面設定",
+        "transfer": "傳輸設定",
+        "language": "語言",
+        "theme": {
+            "title": "主題",
+            "light": "淺色",
+            "dark": "深色",
+            "system": "跟隨系統"
+        },
+        "maxConcurrentTransfers": "最大並行傳輸數",
+        "chunkSizeMB": "區塊大小 (MB)",
+        "autoRetry": "失敗時自動重試",
+        "retryAttempts": "重試次數"
+    }
+}

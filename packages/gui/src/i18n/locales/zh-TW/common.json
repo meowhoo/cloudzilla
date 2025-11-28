@@ -1,0 +1,256 @@
+{
+    "app": {
+        "name": "CloudZilla",
+        "title": "雲端檔案管理"
+    },
+    "actions": {
+        "save": "儲存",
+        "cancel": "取消",
+        "delete": "刪除",
+        "refresh": "重新整理",
+        "ok": "確定",
+        "close": "關閉",
+        "add": "新增",
+        "edit": "編輯",
+        "connect": "連線",
+        "disconnect": "斷線"
+    },
+    "toolbar": {
+        "siteManager": "站點管理",
+        "refresh": "重新整理",
+        "switchTheme": "切換主題",
+        "switchToLight": "切換至淺色模式",
+        "switchToDark": "切換至深色模式",
+        "showTerminal": "顯示終端機",
+        "hideTerminal": "隱藏終端機",
+        "settings": "設定",
+        "copyToRight": "複製到右側",
+        "copyToLeft": "複製到左側",
+        "moveToRight": "移動到右側",
+        "moveToLeft": "移動到左側",
+        "delete": "刪除"
+    },
+    "siteManager": {
+        "title": "站點管理",
+        "noSites": "尚未設定站點。點擊「新增站點」以開始。",
+        "addSite": "新增站點",
+        "newSite": "新增站點",
+        "editSite": "編輯站點",
+        "deleteSite": "刪除站點",
+        "confirmDelete": "確定要刪除這個站點嗎？",
+        "siteName": "站點名稱",
+        "hostName": "主機（名稱）",
+        "protocol": "協定",
+        "provider": "服務商",
+        "selectProvider": "選擇服務商",
+        "clientId": "Client ID",
+        "clientSecret": "Client Secret",
+        "local": "本機",
+        "testConnection": "測試連線",
+        "useAutomaticOAuth": "使用自動 OAuth（推薦）",
+        "autoOAuthDesc": "瀏覽器將自動開啟進行授權。無需 Client ID/Secret。",
+        "manualOAuthDesc": "手動設定需要您自己的 OAuth 憑證。",
+        "howToGetId": "如何取得 ID？",
+        "connectWithOAuth": "使用 OAuth 連線",
+        "connect": "連線",
+        "update": "更新",
+        "cancelOAuth": "取消 OAuth",
+        "tryAgain": "重試",
+        "oauthStarting": "正在啟動 OAuth 流程...",
+        "oauthWaiting": "請在瀏覽器中完成授權...",
+        "oauthCompleting": "正在完成授權...",
+        "oauthSuccess": "成功連線！",
+        "oauthError": "錯誤：{{error}}",
+        "enterName": "請輸入此遠端的名稱",
+        "siteDetails": "站點詳情"
+    },
+    "connection": {
+        "testing": "測試連線中...",
+        "connected": "已連線",
+        "disconnected": "未連線",
+        "failed": "連線失敗",
+        "testFailed": "無法連線至 {{name}}"
+    },
+    "fileList": {
+        "name": "名稱",
+        "size": "大小",
+        "modified": "修改時間",
+        "type": "類型",
+        "folder": "資料夾",
+        "file": "檔案",
+        "goUp": "上一層",
+        "selectSite": "請選擇站點以瀏覽檔案",
+        "loading": "載入中...",
+        "empty": "此資料夾為空",
+        "errorLoading": "無法載入檔案"
+    },
+    "statusPanel": {
+        "idle": "就緒",
+        "running": "處理中...",
+        "completed": "已完成",
+        "error": "錯誤",
+        "logs": "記錄",
+        "clearLogs": "清除記錄",
+        "fileProgress": "檔案進度",
+        "terminal": "終端機",
+        "processing": "處理中...",
+        "noOperations": "尚無檔案操作。",
+        "enterCommand": "輸入指令...",
+        "terminalComingSoon": "終端機功能即將推出...",
+        "tasks": "任務",
+        "progress": "進度",
+        "console": "日誌"
+    },
+    "tasks": {
+        "running": "執行中",
+        "queued": "排隊中",
+        "completed": "已完成",
+        "failed": "失敗",
+        "cancelled": "已取消",
+        "cancel": "取消",
+        "retry": "重試",
+        "remove": "移除",
+        "delete": "刪除",
+        "selectAll": "全選",
+        "clearQueue": "清除佇列",
+        "clearCompleted": "清除已完成",
+        "clearFailed": "清除失敗",
+        "clearHistory": "清除歷史",
+        "noTasks": "無任務",
+        "total": "總計",
+        "selected": "已選取 {{count}} 項",
+        "batchCancel": "取消選取項",
+        "batchRetry": "重試選取項",
+        "batchRemove": "移除選取項",
+        "clearSelection": "清除選取",
+        "subTab": {
+            "queued": "佇列",
+            "failed": "失敗",
+            "successful": "成功"
+        }
+    },
+    "progress": {
+        "speed": "速度",
+        "eta": "預計剩餘時間",
+        "transferred": "已傳輸",
+        "currentFile": "目前檔案",
+        "files": "檔案數",
+        "elapsed": "已耗時",
+        "command": "指令",
+        "summary": "{{count}} 個傳輸進行中",
+        "noActiveTasks": "無進行中的傳輸",
+        "cancelTransfer": "取消傳輸",
+        "transferringFiles": "{{count}} 個檔案傳輸中",
+        "total": "合計",
+        "filesLabel": "個檔案",
+        "noActiveFiles": "目前沒有檔案傳輸中"
+    },
+    "console": {
+        "all": "全部",
+        "info": "資訊",
+        "success": "成功",
+        "warning": "警告",
+        "error": "錯誤",
+        "debug": "除錯",
+        "autoScroll": "自動捲動",
+        "export": "匯出",
+        "clear": "清除",
+        "noLogs": "尚無記錄"
+    },
+    "messages": {
+        "connecting": "正在連線至 {{name}}...",
+        "connected": "已成功連線至 {{name}}",
+        "refreshed": "已重新整理檔案列表",
+        "themeChanged": "已切換至{{mode}}模式",
+        "navigatedTo": "已導航至 {{folder}}",
+        "navigatedUp": "已返回上一層",
+        "appStarted": "應用程式已啟動。就緒。"
+    },
+    "contextMenu": {
+        "copyToRight": "複製到右側",
+        "copyToLeft": "複製到左側",
+        "moveToRight": "移動到右側",
+        "moveToLeft": "移動到左側",
+        "syncToRight": "同步到右側",
+        "syncToLeft": "同步到左側",
+        "delete": "刪除",
+        "rename": "重新命名",
+        "newFolder": "新增資料夾",
+        "refresh": "重新整理",
+        "confirmDelete": "確定要刪除 {{count}} 個項目嗎？",
+        "newFolderPrompt": "請輸入資料夾名稱：",
+        "copyToHere": "複製到此處",
+        "copyPath": "複製路徑"
+    },
+    "breadcrumb": {
+        "home": "首頁",
+        "root": "根目錄",
+        "thisPC": "本機"
+    },
+    "common": {
+        "save": "儲存",
+        "cancel": "取消"
+    },
+    "alerts": {
+        "confirm": {
+            "delete": "確定要刪除 {{count}} 個項目嗎？",
+            "deleteTitle": "刪除確認",
+            "deleteConfirm": "刪除",
+            "cancel": "取消"
+        },
+        "toast": {
+            "deleteStarted": "正在刪除 {{count}} 個項目...",
+            "deleteSuccess": "已刪除 {{count}} 個項目",
+            "deleteFailed": "刪除失敗：{{error}}",
+            "transferStarted": "開始傳輸：{{name}}",
+            "transferSuccess": "傳輸完成：{{name}}",
+            "transferFailed": "傳輸失敗：{{error}}",
+            "folderCreated": "已建立資料夾：{{name}}",
+            "folderCreateFailed": "建立資料夾失敗：{{error}}",
+            "renamed": "已重新命名為：{{name}}",
+            "renameFailed": "重新命名失敗：{{error}}",
+            "pathCopied": "已複製路徑到剪貼簿",
+            "connected": "已連線至 {{name}}",
+            "connectionFailed": "連線失敗：{{error}}"
+        }
+    },
+    "settings": {
+        "title": "設定",
+        "tabs": {
+            "system": "系統",
+            "network": "網路",
+            "faq": "常見問題",
+            "privacy": "隱私權"
+        },
+        "system": {
+            "title": "系統設定",
+            "theme": "主題",
+            "themeDesc": "選擇應用程式顏色主題",
+            "themeSystem": "跟隨系統",
+            "themeLight": "淺色",
+            "themeDark": "深色",
+            "language": "語言",
+            "languageDesc": "選擇顯示語言",
+            "showHiddenFiles": "顯示隱藏檔案",
+            "showHiddenFilesDesc": "顯示以點（.）開頭的檔案"
+        },
+        "network": {
+            "title": "網路設定",
+            "applyToNewTasks": "設定將套用於新的傳輸任務，執行中的任務不受影響。",
+            "maxTransfers": "最大同時任務數",
+            "maxTransfersDesc": "同時執行的傳輸任務數量（1-4）",
+            "bandwidthLimit": "頻寬限制",
+            "bandwidthLimitDesc": "最大傳輸速度（0 = 不限制）",
+            "autoRetry": "自動重試",
+            "autoRetryDesc": "自動重試失敗的傳輸",
+            "retryAttempts": "重試次數",
+            "retryAttemptsDesc": "重試嘗試次數（1-10）"
+        },
+        "faq": {
+            "title": "常見問題"
+        },
+        "privacy": {
+            "title": "隱私權政策"
+        }
+    }
+}

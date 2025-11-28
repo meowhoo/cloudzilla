@@ -1,0 +1,94 @@
+{
+  "name": "@cloudzilla/gui",
+  "productName": "CloudZilla",
+  "version": "1.0.0",
+  "description": "Cloud storage file transfer utility for Dropbox, Google Drive, and OneDrive",
+  "author": "CloudZilla Team",
+  "main": ".webpack/main",
+  "scripts": {
+    "start": "electron-forge start",
+    "dev": "electron main-dev.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "make:appx": "electron-builder --prepackaged out/CloudZilla-win32-x64 --win appx --x64",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
+  },
+  "build": {
+    "appId": "com.cloudzilla.app",
+    "productName": "CloudZilla",
+    "executableName": "cloudzilla",
+    "directories": {
+      "output": "out/make/appx",
+      "buildResources": "../../build"
+    },
+    "files": [
+      "**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/bin",
+        "to": "bin"
+      }
+    ],
+    "win": {
+      "icon": "../../build/icons/icon.ico",
+      "target": [
+        {
+          "target": "appx",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "appx": {
+      "applicationId": "CloudZilla",
+      "backgroundColor": "#1a1a2e",
+      "displayName": "CloudZilla - Cloud File Transfer",
+      "identityName": "CloudZillaTeam.CloudZilla",
+      "publisher": "CN=CloudZillaTeam",
+      "publisherDisplayName": "CloudZilla Team",
+      "languages": [
+        "en-US",
+        "zh-TW"
+      ],
+      "showNameOnTiles": true
+    }
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^11.0.2",
+    "i18next": "^25.6.3",
+    "lucide-react": "^0.554.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^16.3.5",
+    "sweetalert2": "^11.26.3",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "@electron-forge/plugin-webpack": "^7.2.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/uuid": "^11.0.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "css-loader": "^6.0.0",
+    "electron": "28.0.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.0",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.0.0",
+    "ts-loader": "^9.0.0",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths-webpack-plugin": "^4.2.0",
+    "typescript": "^5.0.0"
+  }
+}

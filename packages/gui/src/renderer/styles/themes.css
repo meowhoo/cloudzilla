@@ -1,0 +1,76 @@
+/**
+ * Themes - Adapted from Novel Reader Browser
+ */
+
+:root {
+    /* Semantic Colors */
+    --color-bg: #f7f8fa;
+    --color-surface: #ffffff;
+    --color-fg: #1a1d21;
+    --color-fg-muted: #6b7280;
+    --color-muted: #4b5563;
+    --color-border: rgba(0, 0, 0, 0.1);
+
+    /* Brand & Functional Colors */
+    --color-primary: #3b82f6;
+    --color-primary-rgb: 59, 130, 246;
+    --color-primary-bg: rgba(59, 130, 246, 0.1);
+    --color-primary-hover: #60a5fa;
+    --color-danger: #ff5d6c;
+    --color-warning: #f59e0b;
+    --color-success: #10b981;
+
+    /* Interaction States */
+    --color-hover: rgba(0, 0, 0, 0.05);
+    --color-active: rgba(0, 0, 0, 0.1);
+    --color-disabled: rgba(0, 0, 0, 0.3);
+    --color-overlay: rgba(0, 0, 0, 0.5);
+
+    /* Shadows */
+    --elev-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --elev-2: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --elev-3: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    /* Settings Modal */
+    --color-surface-alt: #f3f4f6;
+    --color-sidebar-bg: #eef2f7;
+    --color-sidebar-active: #ffffff;
+    --color-sidebar-hover: rgba(59, 130, 246, 0.12);
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+}
+
+/* Dark Theme (Default for this app as per user preference for "terminal" look) */
+:root[data-theme="dark"] {
+    --color-bg: #1e1e1e;
+    --color-surface: #252526;
+    --color-fg: #e0e0e0;
+    --color-fg-muted: #b0b0b0;
+    --color-muted: #9a9a9a;
+    --color-border: rgba(255, 255, 255, 0.12);
+
+    --color-primary: #6aa6ff;
+    --color-primary-rgb: 106, 166, 255;
+    --color-primary-bg: rgba(106, 166, 255, 0.15);
+    --color-primary-hover: #8abbff;
+    --color-danger: #ff6b7a;
+    --color-warning: #ffd670;
+    --color-success: #7addb2;
+
+    --color-hover: rgba(255, 255, 255, 0.08);
+    --color-active: rgba(255, 255, 255, 0.12);
+    --color-disabled: rgba(255, 255, 255, 0.3);
+    --color-overlay: rgba(0, 0, 0, 0.8);
+
+    --elev-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --elev-2: 0 6px 16px rgba(0, 0, 0, 0.6);
+    --elev-3: 0 12px 24px rgba(0, 0, 0, 0.7);
+
+    /* Settings Modal */
+    --color-surface-alt: #2d2d30;
+    --color-sidebar-bg: #2d2d30;
+    --color-sidebar-active: #333338;
+    --color-sidebar-hover: rgba(106, 166, 255, 0.18);
+}

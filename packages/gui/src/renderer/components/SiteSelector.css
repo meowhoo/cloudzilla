@@ -1,0 +1,112 @@
+.site-selector-custom {
+    position: relative;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.site-selector-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background-color: var(--color-surface);
+    color: var(--color-fg);
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.site-selector-button:hover {
+    border-color: var(--color-primary);
+}
+
+.site-selector-button:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.site-selector-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.site-selector-button .chevron {
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    color: var(--color-fg-muted);
+}
+
+.site-selector-button .chevron.open {
+    transform: rotate(180deg);
+}
+
+.site-selector-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.site-selector-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.site-selector-option:hover {
+    background-color: var(--color-hover);
+}
+
+.site-selector-option.selected {
+    background-color: var(--color-active);
+}
+
+.option-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Status icon styles */
+.status-icon {
+    flex-shrink: 0;
+}
+
+.status-icon.connecting {
+    color: var(--color-primary);
+    animation: spin 1s linear infinite;
+}
+
+.status-icon.connected {
+    color: #2ed573;
+}
+
+.status-icon.failed {
+    color: var(--color-danger);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,259 @@
+.tasks-tab {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Task List (scrollable area) */
+.tasks-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 4px;
+}
+
+/* Table Layout */
+.tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 11px;
+}
+
+.tasks-table td {
+    padding: 2px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.tasks-table .task-row {
+    cursor: context-menu;
+}
+
+/* Zebra striping */
+.tasks-table .task-row:nth-child(odd) {
+    background: transparent;
+}
+
+.tasks-table .task-row:nth-child(even) {
+    background: rgba(128, 128, 128, 0.05);
+}
+
+.tasks-table .task-row:hover {
+    background: rgba(128, 128, 128, 0.12);
+}
+
+/* Status indicator - subtle left border */
+.tasks-table .task-row.status-running td:first-child {
+    border-left: 3px solid var(--accent-color, #2196f3);
+}
+
+.tasks-table .task-row.status-queued td:first-child {
+    border-left: 3px solid var(--text-tertiary, #888);
+}
+
+.tasks-table .task-row.status-completed td:first-child {
+    border-left: 3px solid var(--success-color, #4caf50);
+}
+
+.tasks-table .task-row.status-failed td:first-child,
+.tasks-table .task-row.status-cancelled td:first-child {
+    border-left: 3px solid var(--error-color, #f44336);
+}
+
+/* Column widths - same as ProgressTab */
+.tasks-table .col-path {
+    width: 65%;
+    font-family: monospace;
+    color: var(--text-secondary, #666);
+}
+
+.tasks-table .col-eta {
+    width: 10%;
+    font-family: monospace;
+    color: var(--text-secondary, #666);
+    text-align: right;
+}
+
+.tasks-table .col-progress {
+    width: 12%;
+    padding: 2px 6px !important;
+}
+
+.tasks-table .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--bg-tertiary, #e0e0e0);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.tasks-table .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.tasks-table .col-percent {
+    width: 3%;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-primary, #333);
+    text-align: right;
+}
+
+.tasks-table .col-info {
+    width: 10%;
+    font-size: 10px;
+    font-family: monospace;
+    color: var(--text-secondary, #666);
+    text-align: right;
+}
+
+/* Sub-tabs (fixed at bottom) */
+.sub-tabs {
+    display: flex;
+    gap: 0;
+    padding: 0;
+    background: var(--color-surface);
+    border-top: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.sub-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-tertiary, #888);
+    font-size: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.sub-tab:hover {
+    color: var(--text-secondary);
+}
+
+.sub-tab.active {
+    color: var(--text-primary);
+    background: var(--color-bg);
+}
+
+.sub-tab-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    background: var(--text-tertiary);
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.sub-tab.active .sub-tab-badge {
+    background: var(--accent-color);
+}
+
+.sub-tab-badge.error {
+    background: var(--error-color);
+}
+
+.sub-tab-badge.success {
+    background: var(--success-color);
+}
+
+/* Context Menu */
+.context-menu {
+    position: fixed;
+    min-width: 100px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.context-menu-item {
+    padding: 6px 10px;
+    font-size: 11px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background 0.1s ease;
+}
+
+.context-menu-item:hover {
+    background: var(--bg-hover);
+}
+
+.context-menu-item.cancel:hover {
+    background: var(--error-bg);
+    color: var(--error-color);
+}
+
+.context-menu-item.retry:hover {
+    background: var(--accent-bg);
+    color: var(--accent-color);
+}
+
+.context-menu-item.remove:hover {
+    background: var(--error-bg);
+    color: var(--error-color);
+}
+
+/* Empty State */
+.empty-state {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+/* Scrollbar styling */
+.tasks-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tasks-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tasks-list::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color, #555);
+    border-radius: 3px;
+}
+
+.tasks-list::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover-color, #777);
+}
+
+/* Dark theme */
+[data-theme='dark'] .tasks-table .progress-bar {
+    background: var(--bg-tertiary, #404040);
+}
+
+[data-theme='dark'] .tasks-table .col-path,
+[data-theme='dark'] .tasks-table .col-eta,
+[data-theme='dark'] .tasks-table .col-info {
+    color: var(--text-secondary, #aaa);
+}
+
+[data-theme='dark'] .tasks-table .col-percent {
+    color: var(--text-primary, #eee);
+}
+
